@@ -1,0 +1,88 @@
+<svg width="900" height="700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 24px sans-serif; fill: #333; }
+    .subtitle { font: 18px sans-serif; fill: #555; }
+    .box { fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 2; rx: 8; ry: 8; }
+    .agent { fill: #e3f2fd; stroke: #1565c0; stroke-width: 2; rx: 10; ry: 10; }
+    .environment { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2; rx: 10; ry: 10; }
+    .arrow { stroke: #5d4037; stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+    .text { font: 16px sans-serif; fill: #333; }
+    .label { font: bold 16px sans-serif; fill: #5d4037; }
+    .reward { fill: #fff3e0; stroke: #ef6c00; stroke-width: 2; rx: 8; ry: 8; }
+    .policy { fill: #e0f7fa; stroke: #00838f; stroke-width: 2; rx: 8; ry: 8; }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+      refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5d4037" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">Reinforcement Learning for Motor Control</text>
+  
+  <!-- Agent Box -->
+  <rect x="100" y="100" width="200" height="300" class="agent" />
+  <text x="200" y="130" text-anchor="middle" class="label">Robot Agent</text>
+  
+  <!-- Agent Components -->
+  <rect x="120" y="160" width="160" height="60" class="policy" />
+  <text x="200" y="180" text-anchor="middle" class="text">Policy</text>
+  <text x="200" y="200" text-anchor="middle" class="text">Network</text>
+  
+  <rect x="120" y="240" width="160" height="60" class="box" />
+  <text x="200" y="260" text-anchor="middle" class="text">Action</text>
+  <text x="200" y="280" text-anchor="middle" class="text">Selection</text>
+  
+  <rect x="120" y="320" width="160" height="60" class="box" />
+  <text x="200" y="340" text-anchor="middle" class="text">Learning</text>
+  <text x="200" y="360" text-anchor="middle" class="text">Algorithm</text>
+  
+  <!-- Environment Box -->
+  <rect x="600" y="150" width="200" height="200" class="environment" />
+  <text x="700" y="180" text-anchor="middle" class="label">Robot Environment</text>
+  <text x="700" y="210" text-anchor="middle" class="text">(Physics Simulation</text>
+  <text x="700" y="230" text-anchor="middle" class="text">or Real World)</text>
+  
+  <!-- Robot representation in environment -->
+  <line x1="650" y1="270" x2="650" y2="330" stroke="#333" stroke-width="8" />
+  <line x1="630" y1="280" x2="670" y2="280" stroke="#333" stroke-width="8" />
+  <line x1="640" y1="280" x2="640" y2="300" stroke="#333" stroke-width="6" />
+  <line x1="660" y1="280" x2="660" y2="300" stroke="#333" stroke-width="6" />
+  
+  <text x="700" y="310" text-anchor="middle" class="text">Humanoid</text>
+  <text x="700" y="330" text-anchor="middle" class="text">Robot</text>
+  
+  <!-- Reward Box -->
+  <rect x="350" y="450" width="200" height="80" class="reward" />
+  <text x="450" y="480" text-anchor="middle" class="label">Reward Function</text>
+  <text x="450" y="500" text-anchor="middle" class="text">R = f(state, action)</text>
+  
+  <!-- Experience Buffer -->
+  <rect x="350" y="100" width="200" height="40" class="box" />
+  <text x="450" y="125" text-anchor="middle" class="text">Experience Buffer</text>
+  
+  <!-- Arrows showing the RL loop -->
+  <line x1="300" y1="250" x2="600" y2="250" class="arrow" />
+  <text x="450" y="240" text-anchor="middle" class="text">Action (a)</text>
+  
+  <line x1="600" y1="270" x2="300" y2="270" class="arrow" />
+  <text x="450" y="285" text-anchor="middle" class="text">State (s)</text>
+  
+  <line x1="500" y1="450" x2="500" y2="400" class="arrow" />
+  <text x="510" y="430" text-anchor="start" class="text">Reward (r)</text>
+  
+  <line x1="450" y1="140" x2="450" y2="100" class="arrow" />
+  <text x="460" y="125" text-anchor="start" class="text">Sample</text>
+  
+  <line x1="450" y1="530" x2="200" y2="380" class="arrow" />
+  <text x="350" y="470" text-anchor="middle" class="text">Learning Signal</text>
+  
+  <!-- RL Loop Description -->
+  <text x="450" y="580" text-anchor="middle" class="subtitle">Reinforcement Learning Loop:</text>
+  <text x="450" y="600" text-anchor="middle" class="text">1. Agent observes state (s) from environment</text>
+  <text x="450" y="620" text-anchor="middle" class="text">2. Agent selects action (a) based on policy</text>
+  <text x="450" y="640" text-anchor="middle" class="text">3. Environment transitions to new state, provides reward (r)</text>
+  <text x="450" y="660" text-anchor="middle" class="text">4. Agent updates policy based on experience</text>
+</svg>

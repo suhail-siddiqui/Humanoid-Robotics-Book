@@ -1,0 +1,71 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 24px sans-serif; fill: #333; }
+    .subtitle { font: 18px sans-serif; fill: #555; }
+    .box { fill: #e0f7fa; stroke: #00838f; stroke-width: 2; rx: 10; ry: 10; }
+    .arrow { stroke: #00838f; stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+    .text { font: 16px sans-serif; fill: #333; }
+    .highlight { fill: #ffcc80; stroke: #ef6c00; stroke-width: 2; }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+      refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00838f" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">Physical AI vs. Classical AI</text>
+  
+  <!-- Classical AI Box -->
+  <rect x="50" y="100" width="300" height="400" class="box" />
+  <text x="200" y="130" text-anchor="middle" class="subtitle">Classical AI</text>
+  
+  <!-- Classical AI components -->
+  <text x="200" y="180" text-anchor="middle" class="text">Symbolic</text>
+  <text x="200" y="200" text-anchor="middle" class="text">Representations</text>
+  
+  <text x="200" y="250" text-anchor="middle" class="text">Logical</text>
+  <text x="200" y="270" text-anchor="middle" class="text">Reasoning</text>
+  
+  <text x="200" y="320" text-anchor="middle" class="text">Discrete</text>
+  <text x="200" y="340" text-anchor="middle" class="text">Computations</text>
+  
+  <text x="200" y="390" text-anchor="middle" class="text">Digital</text>
+  <text x="200" y="410" text-anchor="middle" class="text">Environment</text>
+  
+  <!-- Physical AI Box -->
+  <rect x="450" y="100" width="300" height="400" class="box" />
+  <text x="600" y="130" text-anchor="middle" class="subtitle">Physical AI</text>
+  
+  <!-- Physical AI components -->
+  <text x="600" y="180" text-anchor="middle" class="text">Embodied</text>
+  <text x="600" y="200" text-anchor="middle" class="text">Intelligence</text>
+  
+  <text x="600" y="250" text-anchor="middle" class="text">Continuous</text>
+  <text x="600" y="270" text-anchor="middle" class="text">Control</text>
+  
+  <text x="600" y="320" text-anchor="middle" class="text">Real-time</text>
+  <text x="600" y="340" text-anchor="middle" class="text">Processing</text>
+  
+  <text x="600" y="390" text-anchor="middle" class="text">Physical</text>
+  <text x="600" y="410" text-anchor="middle" class="text">Interaction</text>
+  
+  <!-- Physics consideration -->
+  <rect x="470" y="450" width="260" height="60" class="highlight" />
+  <text x="600" y="470" text-anchor="middle" class="text">Physics &amp; Real-World</text>
+  <text x="600" y="490" text-anchor="middle" class="text">Constraints</text>
+  
+  <!-- Arrows showing differences -->
+  <line x1="350" y1="200" x2="450" y2="200" class="arrow" />
+  <line x1="350" y1="270" x2="450" y2="270" class="arrow" />
+  <line x1="350" y1="340" x2="450" y2="340" class="arrow" />
+  <line x1="350" y1="410" x2="450" y2="410" class="arrow" />
+  
+  <!-- Labels for arrows -->
+  <text x="400" y="180" text-anchor="middle" class="text">Discrete → Continuous</text>
+  <text x="400" y="250" text-anchor="middle" class="text">Logic → Control</text>
+  <text x="400" y="320" text-anchor="middle" class="text">Off-line → Real-time</text>
+  <text x="400" y="390" text-anchor="middle" class="text">Virtual → Physical</text>
+</svg>

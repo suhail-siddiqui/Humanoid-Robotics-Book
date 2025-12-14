@@ -1,0 +1,143 @@
+<svg width="1000" height="700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 24px sans-serif; fill: #333; }
+    .subtitle { font: 18px sans-serif; fill: #555; }
+    .hardware { fill: #ffebee; stroke: #c62828; stroke-width: 2; rx: 8; ry: 8; }
+    .middleware { fill: #e3f2fd; stroke: #1565c0; stroke-width: 2; rx: 8; ry: 8; }
+    .ai { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2; rx: 8; ry: 8; }
+    .connection { stroke: #757575; stroke-width: 2; stroke-dasharray: 5,5; fill: none; }
+    .dataflow { stroke: #5d4037; stroke-width: 3; marker-end: url(#arrowhead); fill: none; }
+    .text { font: 16px sans-serif; fill: #333; }
+    .label { font: bold 16px sans-serif; fill: #c62828; }
+    .h1label { font: bold 18px sans-serif; fill: #1565c0; }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+      refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5d4037" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" class="title">Hardware Integration with AI Systems</text>
+  
+  <!-- Hardware Layer -->
+  <text x="150" y="80" text-anchor="middle" class="subtitle">Hardware Layer</text>
+  
+  <!-- Actuators -->
+  <rect x="50" y="100" width="200" height="60" class="hardware" />
+  <text x="150" y="135" text-anchor="middle" class="label">Actuators & Motors</text>
+  
+  <!-- Sensors -->
+  <rect x="50" y="180" width="200" height="60" class="hardware" />
+  <text x="150" y="215" text-anchor="middle" class="label">Sensors</text>
+  <text x="150" y="235" text-anchor="middle" font-size="12" fill="#333">(IMU, Encoders, Cameras, etc.)</text>
+  
+  <!-- MCU/Controller -->
+  <rect x="50" y="260" width="200" height="60" class="hardware" />
+  <text x="150" y="295" text-anchor="middle" class="label">Microcontroller</text>
+  <text x="150" y="315" text-anchor="middle" font-size="12" fill="#333">/Real-time Controller</text>
+  
+  <!-- Communication Interface -->
+  <rect x="50" y="340" width="200" height="60" class="hardware" />
+  <text x="150" y="375" text-anchor="middle" class="label">Communication</text>
+  <text x="150" y="395" text-anchor="middle" font-size="12" fill="#333">(CAN, Ethernet, USB, etc.)</text>
+  
+  <!-- Middleware Layer -->
+  <text x="500" y="80" text-anchor="middle" class="subtitle">Middleware Layer</text>
+  
+  <!-- ROS2 -->
+  <rect x="375" y="100" width="250" height="100" class="middleware" />
+  <text x="500" y="135" text-anchor="middle" class="h1label">ROS2</text>
+  <text x="500" y="155" text-anchor="middle" font-size="14" fill="#333">Robot Operating System 2</text>
+  <text x="500" y="175" text-anchor="middle" font-size="12" fill="#333">Communication Framework</text>
+  
+  <!-- Hardware Abstraction -->
+  <rect x="375" y="220" width="250" height="60" class="middleware" />
+  <text x="500" y="255" text-anchor="middle" class="h1label">Hardware Abstraction</text>
+  <text x="500" y="275" text-anchor="middle" font-size="12" fill="#333">(Hardware Interface, Drivers)</text>
+  
+  <!-- AI Layer -->
+  <text x="850" y="80" text-anchor="middle" class="subtitle">AI Layer</text>
+  
+  <!-- Perception -->
+  <rect x="750" y="100" width="200" height="60" class="ai" />
+  <text x="850" y="130" text-anchor="middle" class="text">Perception</text>
+  <text x="850" y="150" text-anchor="middle" font-size="12" fill="#333">Systems</text>
+  
+  <!-- Control -->
+  <rect x="750" y="180" width="200" height="60" class="ai" />
+  <text x="850" y="210" text-anchor="middle" class="text">Control</text>
+  <text x="850" y="230" text-anchor="middle" font-size="12" fill="#333">Systems</text>
+  
+  <!-- Learning -->
+  <rect x="750" y="260" width="200" height="60" class="ai" />
+  <text x="850" y="290" text-anchor="middle" class="text">Learning</text>
+  <text x="850" y="310" text-anchor="middle" font-size="12" fill="#333">Systems</text>
+  
+  <!-- Safety System -->
+  <rect x="750" y="340" width="200" height="60" class="ai" />
+  <text x="850" y="370" text-anchor="middle" class="text">Safety</text>
+  <text x="850" y="390" text-anchor="middle" font-size="12" fill="#333">Systems</text>
+  
+  <!-- Data Flow Arrows -->
+  <!-- Hardware to Middleware -->
+  <line x1="250" y1="130" x2="375" y2="130" class="dataflow" />
+  <text x="312" y="120" text-anchor="middle" class="text">Actuator Commands</text>
+  
+  <line x1="375" y1="210" x2="250" y2="210" class="dataflow" />
+  <text x="312" y="225" text-anchor="middle" class="text">Sensor Data</text>
+  
+  <!-- Middleware to AI -->
+  <line x1="625" y1="150" x2="750" y2="150" class="dataflow" />
+  <text x="687" y="140" text-anchor="middle" class="text">Processed Sensor Data</text>
+  
+  <line x1="750" y1="210" x2="625" y2="210" class="dataflow" />
+  <text x="687" y="225" text-anchor="middle" class="text">Control Commands</text>
+  
+  <!-- AI internal connections -->
+  <line x1="750" y1="130" x2="750" y2="180" class="connection" />
+  <line x1="750" y1="210" x2="750" y2="260" class="connection" />
+  <line x1="750" y1="290" x2="750" y2="340" class="connection" />
+  
+  <line x1="950" y1="130" x2="950" y2="180" class="connection" />
+  <line x1="950" y1="210" x2="950" y2="260" class="connection" />
+  <line x1="950" y1="290" x2="950" y2="340" class="connection" />
+  
+  <line x1="750" y1="370" x2="625" y2="370" class="dataflow" />
+  <text x="687" y="360" text-anchor="middle" class="text">Safety Checks</text>
+  
+  <!-- Feedback loop -->
+  <line x1="625" y1="370" x2="625" y2="130" class="connection" />
+  <line x1="625" y1="130" x2="625" y2="150" class="connection" />
+  
+  <!-- Legend -->
+  <rect x="50" y="500" width="300" height="160" fill="none" stroke="#ccc" stroke-width="1" />
+  <text x="60" y="520" font-weight="bold" class="text">Legend:</text>
+  
+  <rect x="70" y="535" width="20" height="15" class="hardware" />
+  <text x="100" y="547" class="text">Hardware Components</text>
+  
+  <rect x="70" y="555" width="20" height="15" class="middleware" />
+  <text x="100" y="567" class="text">Middleware/Communication</text>
+  
+  <rect x="70" y="575" width="20" height="15" class="ai" />
+  <text x="100" y="587" class="text">AI/Software Components</text>
+  
+  <line x1="70" y1="595" x2="90" y2="595" class="connection" />
+  <text x="100" y="598" class="text">Information Flow</text>
+  
+  <line x1="70" y1="615" x2="90" y2="615" class="dataflow" />
+  <text x="100" y="618" class="text">Control/Feedback Flow</text>
+  
+  <!-- Key Integration Points -->
+  <rect x="400" y="500" width="550" height="160" fill="none" stroke="#ccc" stroke-width="1" />
+  <text x="410" y="520" font-weight="bold" class="text">Key Integration Concepts:</text>
+  <text x="410" y="540" class="text">• Hardware abstraction layers separate physical components from AI algorithms</text>
+  <text x="410" y="560" class="text">• Middleware provides standardized communication protocols</text>
+  <text x="410" y="580" class="text">• Real-time requirements must be met for safety-critical systems</text>
+  <text x="410" y="600" class="text">• Sensor fusion combines multiple input sources for robust perception</text>
+  <text x="410" y="620" class="text">• Safety systems monitor both hardware and AI component behavior</text>
+  <text x="410" y="640" class="text">• Feedback loops ensure system stability and adaptation</text>
+</svg>
